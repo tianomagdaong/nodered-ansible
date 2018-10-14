@@ -26,7 +26,8 @@ $ terraform init
 $ terraform plan -var-file="config.tfvars"
 $ terraform apply -var-file="config.tfvars"
 ```
-3. If successful the, output will be EC2 instance's public ip. To access the provisioned node-red, use <ec2_public_ip>:1880/
+3. If successful the, output will be ec2 instance' public ip. 
+To access the provisioned node-red, use <ec2_public_ip>:1880/
 
 4. To destroy you need to execute:
 
