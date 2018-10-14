@@ -1,0 +1,5 @@
+access_key = ""
+secret_key = ""
+key_name = ""
+ssh_key_private = ""
+python_interpreter = ""
