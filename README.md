@@ -9,27 +9,33 @@ Technical assessment for flugel.it. Provision nodered instance using Ansible.
 - To destroy, run vagrant destroy.
 
 ## Using Terraform with AWS as provider.
-1. Add values for variables in the config.tfvars.
+
+1. Supply the AWS credentials/config to environment variables.
+
+```bash
+$ export AWS_ACCESS_KEY_ID="anaccesskey"
+$ export AWS_SECRET_ACCESS_KEY="asecretkey"
+$ export TF_VAR_key_name="keynametobeused"
+$ export TF_VAR_ssh_key_private="locationofprivatekey"
+```
+
+2. Add values for variables in the config.tfvars.
 
 ```hcl
-access_key = ""
-secret_key = ""
-key_name = ""
-ssh_key_private = ""
 python_interpreter = ""
 ```
 
-2. To run you need to execute:
+3. To run you need to execute:
 
 ```bash
 $ terraform init 
 $ terraform plan -var-file="config.tfvars"
 $ terraform apply -var-file="config.tfvars"
 ```
-3. If successful the, output will be ec2 instance' public ip. 
+4. If successful the, output will be ec2 instance' public ip. 
 To access the provisioned node-red, use <ec2_public_ip>:1880/
 
-4. To destroy you need to execute:
+5. To destroy you need to execute:
 
 ```bash
 $ terraform destroy -var-file="config.tfvars"
