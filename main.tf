@@ -24,7 +24,7 @@ resource "aws_instance" "nodered_instance" {
   }
 
   provisioner "local-exec" {
-    command = "ansible-playbook -u ubuntu -i '${self.public_ip}', --private-key ${var.ssh_key_private} -e '${var.python_interpreter} host_key_checking=False' main.yml" 
+    command = "ansible-playbook -u ubuntu -i '${self.public_ip}', --private-key ${var.ssh_key_private} -e '${var.python_interpreter}' main.yml" 
   }
 }
 
