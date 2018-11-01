@@ -17,6 +17,7 @@ $ export AWS_ACCESS_KEY_ID="anaccesskey"
 $ export AWS_SECRET_ACCESS_KEY="asecretkey"
 $ export TF_VAR_key_name="keynametobeused"
 $ export TF_VAR_ssh_key_private="locationofprivatekey"
+$ export ANSIBLE_HOST_KEY_CHECKING=False
 ```
 
 2. Add values for variables in the config.tfvars.
